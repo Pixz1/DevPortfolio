@@ -4,17 +4,20 @@
     justify-content: center;
     background-color: white;
     height: 5em;
+    width: 100%;
 }
 
 nav {
-    width: 75%;
+    margin: auto;
+    width: 1200px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 2.5em;
 }
+
 
 h2 {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
 }
 
@@ -24,8 +27,8 @@ ul {
     padding: 0;
     display: flex;
     gap: 1em;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: end;
 }
 
 a {
