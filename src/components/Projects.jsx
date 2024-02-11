@@ -1,11 +1,11 @@
-import './Home.css'
+import './Projects.css'
 
-export default function Home() {
+export default function Projects() {
     return (
-        <section id='home'>
+        <section id='projects'>
             <div className='container'>
                 <div className='content'>
-                    <h1>home section</h1>
+                    <h1>projects section</h1>
                 </div>
             </div>
         </section>

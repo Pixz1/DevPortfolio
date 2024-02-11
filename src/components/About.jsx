@@ -1,11 +1,11 @@
-import './Home.css'
+import './About.css'
 
-export default function Home() {
+export default function About() {
     return (
-        <section id='home'>
+        <section id='about'>
             <div className='container'>
                 <div className='content'>
-                    <h1>home section</h1>
+                    <h1>about section</h1>
                 </div>
             </div>
         </section>

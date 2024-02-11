@@ -5,16 +5,17 @@
     background-color: white;
     height: 5em;
     width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,.09);
+    position: fixed;
 }
 
 nav {
     margin: auto;
     width: 1200px;
+    padding: 0 1em;
     display: flex;
     justify-content: space-between;
-    padding: 0 2.5em;
 }
-
 
 h2 {
     display: flex;
@@ -38,6 +39,7 @@ a {
     color: #212427;
     position: relative;
     transition: color 0.5s;
+    font-size: 1.2em;
 }
 
 a:hover, a:active {
