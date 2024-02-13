@@ -7,11 +7,11 @@ export default function Header() {
 				<a href='#'>
 					<h2>davo.dev</h2>
 				</a>
-				<ul>
-					<li><a href='#'>Home</a></li>
-					<li><a href='#'>About</a></li>
-					<li><a href='#'>Projects</a></li>
-					<li><a href='#'>Contact</a></li>
+				<ul className='nav-links'>
+					<li><a href='#' className='nav-link'>Home</a></li>
+					<li><a href='#' className='nav-link'>About</a></li>
+					<li><a href='#' className='nav-link'>Projects</a></li>
+					<li><a href='#' className='nav-link'>Contact</a></li>
 				</ul>
 			</nav>
 		</div>
