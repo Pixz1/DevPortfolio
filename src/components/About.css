@@ -1,10 +1,56 @@
 #about {
     display: flex;
-    height: 50vh;
 }
 
 .about-container {
     margin: 5rem auto 0 auto;
     width: 1200px;
     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-heading {
+    display: block;
+    text-align: center;
+    margin: 3rem 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+.about-heading::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + 1.5rem);
+    height: 5px;
+    width: 3rem;
+    background: #D33C39;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.about-info {
+    max-width: 42rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.about-info > p {
+    color: #41474c;
+}
+
+.about-tech {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 2.5rem 0;
+}
+.tech-icons {
+    margin-top: 1rem;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }

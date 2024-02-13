@@ -66,12 +66,3 @@
 #linked:hover .linked-hover-icon, #github:hover .github-hover-icon {
     opacity: 1; 
 }
-
-.tech-icons {
-    margin-top: 1rem;
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}

@@ -1,11 +1,33 @@
 #projects {
     display: flex;
     background-color: white;
-    height: 100vh;
 }
 
 .projects-container {
     margin: 5rem auto 0 auto;
     width: 1200px;
     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-heading {
+    display: block;
+    text-align: center;
+    margin: 3rem 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+}
+.projects-heading::after {
+    content: '';
+    position: absolute;
+    top: calc(100% + 1.5rem);
+    height: 5px;
+    width: 3rem;
+    background: #D33C39;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
 }
