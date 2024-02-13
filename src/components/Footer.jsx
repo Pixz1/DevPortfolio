@@ -14,7 +14,7 @@ export default function Footer() {
                             rel='noopener noreferrer'
                             id='linked'
                         >
-                            <img src='/linked.png' alt='LinkedIn' className='linked-icon'/>
+                            <img src='/linked-white.png' alt='LinkedIn' className='linked-icon'/>
                             <img src='/linked-hover.png' alt='LinkedIn' className='linked-hover-icon'/>
                         </a>
                         <a
@@ -23,7 +23,7 @@ export default function Footer() {
                             rel='noopener noreferrer'
                             id='github'
                         >
-                            <img src='/github.png' alt='GitHub' className='github-icon'/>
+                            <img src='/github-white.png' alt='GitHub' className='github-icon'/>
                             <img src='/github-hover.png' alt='GitHub' className='github-hover-icon'/>
                         </a>
             </div>
