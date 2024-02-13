@@ -4,12 +4,9 @@ export default function Home() {
     return (
         <section id='home'>
             <div className='home-container'>
-                <div className='home-content'>
+                <div className='home-content-top'>
                     <div className='hero-heading'>
-                        <h1>Hello there, I'm Dehong Xu </h1>
-                    </div>
-                    <div className='hero-info'>
-                        <p>An aspiring fullstack developer, currently focusing on mastering front-end developement.</p>
+                        <h1>Hello I'm<br/> <span className='heading-second-line'>Dehong Xu</span></h1>
                     </div>
                     <div className='hero-icons'>
                         <a 
@@ -31,16 +28,15 @@ export default function Home() {
                             <img src='/github-hover.png' alt='GitHub' className='github-hover-icon'/>
                         </a>
                     </div>
-                    <div className='hero-info'>
-                        <p>Current Tech Stack</p>
-                        <ul className='tech-icons'>
-                            <li className='tech-icon'><img src='https://skillicons.dev/icons?i=html'/></li>
-                            <li className='tech-icon'><img src='https://skillicons.dev/icons?i=css'/></li>
-                            <li className='tech-icon'><img src='https://skillicons.dev/icons?i=js'/></li>
-                            <li className='tech-icon'><img src='https://skillicons.dev/icons?i=react'/></li>
-                        </ul>
-                    </div> 
                 </div>
+                <div className='home-content-bot'>
+                    <div className='hero-info'>
+                        <h1>A Front End<br/><span className='info-second-line'>Developer</span></h1>
+                    </div>              
+                </div>
+                <div className='home-content-footer'>
+                    <p>Year of the Dragon</p>
+                </div>               
             </div>
         </section>
     )

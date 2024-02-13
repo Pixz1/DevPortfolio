@@ -1,4 +1,10 @@
 #contact {
-    background-color: white;
     display: flex;
+    height: 50vh;
+}
+
+.contact-container {
+    margin: 5rem auto 0 auto;
+    width: 1200px;
+    padding: 0 2rem;
 }

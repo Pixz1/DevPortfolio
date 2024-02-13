@@ -11,7 +11,7 @@
 
 nav {
     margin: auto;
-    width: 1500px;
+    width: 100%;
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
@@ -43,7 +43,8 @@ a {
 }
 
 .nav-link:hover, .nav-link:active {
-    color: #72DDF7;
+    /* color: #72DDF7; */
+    color: #D33C39;
 }
 
 .nav-link::before {
@@ -54,7 +55,8 @@ a {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #A1E5EF;
+    /* background-color: #A1E5EF; */
+    background-color: #D33C39;
     transform: scaleX(0);
     transition: transform 0.5s ease;
 }
