@@ -1,6 +1,7 @@
 * {
 	box-sizing: border-box;
 	margin: 0;
+	padding: 0;
 }
 
 :root {
@@ -20,4 +21,12 @@
 
 ::selection {
 	background: #D33C39;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
 }
