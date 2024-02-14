@@ -15,7 +15,18 @@ export default function Header() {
 		else document.body.style.overflow = 'auto'
 	}
 	useEffect(() => {
-		toggleBodyScroll(menuOpen)
+		// limits scrollbar to only lower screen medias
+		const handleResize = () => {
+			if (window.matchMedia('(max-width: 768px)').matches)
+			{
+				toggleBodyScroll(menuOpen)
+			}
+		}
+
+		handleResize()
+		window.addEventListener('resize', handleResize)
+
+		return () => window.removeEventListener('resize', handleResize)
 	}, [menuOpen])
 
 	return (
