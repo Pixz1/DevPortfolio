@@ -13,19 +13,25 @@
 }
 
 .home-container {
-    margin: 5rem auto 0 auto;
-    width: 1200px;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .home-content-top {
     display: flex;
-    align-items: flex-end;
+    justify-content: flex-start;
     flex-direction: column;
     margin-right: 3rem;
+    padding-top: 5rem;
+    flex-grow: 1;
 }
 
-.hero-heading, .hero-info {
+.hero-heading {
     text-align: center;
     writing-mode: vertical-rl;
     text-orientation: upright;
@@ -33,21 +39,29 @@
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
-.heading-second-line, .info-second-line {
+.top-second-line, .bot-second-line {
     display: block;
     padding-top: 7rem;
 }
 
 .home-content-bot {
     display: flex;
-    margin: 2rem 0 0 1.3rem;
+    align-items: flex-end;
+    margin-left: 1.3rem;
+    flex-grow: 1;
 }
 
 .home-content-footer {
-    margin-top: 13rem;
     text-align: center;
 }
 
+.hero-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* github and linkedin hover effect */
 #linked, #github {
     margin: 0;
 }
@@ -65,4 +79,48 @@
 }
 #linked:hover .linked-hover-icon, #github:hover .github-hover-icon {
     opacity: 1; 
+}
+
+@media (max-width: 1024px) {
+    .home-container {
+        padding: 0;
+    }
+    .hero-heading {
+        font-size: 0.8rem;
+        text-align: left;
+        padding-top: 1rem;
+    }
+    .home-content-top, .home-content-bot {
+        margin: 0;
+    }
+
+    .top-second-line, .bot-second-line {
+        padding-top: 3rem;
+    }
+    .home-content-footer {
+        margin-top: 0;
+        font-size: 0.7rem;
+    }
+    .hero-icons {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1440px) and (orientation: landscape) {
+    .hero-heading {
+        writing-mode: horizontal-tb;
+        font-size: 0.7rem;
+        margin-bottom: 1rem;
+    }
+    .top-second-line, .bot-second-line {
+        padding: 0;
+    }
+    .home-content-top > .hero-heading {
+        text-align: right;
+    }
+    .hero-icons {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
 }

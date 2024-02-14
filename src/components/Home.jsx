@@ -6,7 +6,7 @@ export default function Home() {
             <div className='home-container'>
                 <div className='home-content-top'>
                     <div className='hero-heading'>
-                        <h1>Hello I'm<br/> <span className='heading-second-line'>Dehong Xu</span></h1>
+                        <h1>Hello I'm<br/> <span className='top-second-line'>Dehong Xu</span></h1>
                     </div>
                     <div className='hero-icons'>
                         <a 
@@ -30,8 +30,8 @@ export default function Home() {
                     </div>
                 </div>
                 <div className='home-content-bot'>
-                    <div className='hero-info'>
-                        <h1>A Front End<br/><span className='info-second-line'>Developer</span></h1>
+                    <div className='hero-heading'>
+                        <h1>A Front End<br/><span className='bot-second-line'>Developer</span></h1>
                     </div>              
                 </div>
                 <div className='home-content-footer'>
