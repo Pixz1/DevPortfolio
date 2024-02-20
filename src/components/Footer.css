@@ -8,3 +8,8 @@
     color: white;
     padding: 3rem 0;
 }
+
+.footer > .hero-icons {
+    display: flex;
+    flex-direction: row;
+}

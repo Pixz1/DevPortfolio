@@ -1,12 +1,11 @@
 #projects {
     display: flex;
-    background-color: white;
+    padding: 8rem 0;
 }
-
 .projects-container {
-    margin: 5rem auto 0 auto;
-    width: 1200px;
-    padding: 0 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,7 +14,7 @@
 .projects-heading {
     display: block;
     text-align: center;
-    margin: 3rem 0;
+    margin-bottom: 5rem;
     text-transform: uppercase;
     letter-spacing: 3px;
     position: relative;
@@ -30,4 +29,87 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 5px;
+}
+
+.projects-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 0 5rem;
+    align-items: center;
+}
+.img-container {
+    height: 22rem;
+    width: 31rem;
+}
+.project-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.project-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-divider {
+    margin: 1rem 0;
+    width: 5rem;
+}
+.description {
+    color: #41474C;
+}
+.links {
+    margin-top: 1rem;
+    display: flex;
+}
+.code-link {
+    margin-right: 2rem;
+}
+.code-link, .live-link {
+    display: flex;
+    align-items: center;
+}
+.code-link a, .live-link a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.code-icon, .open-new-icon {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute; 
+}
+.code-hover-icon, .open-new-hover-icon {
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
+}
+#code:hover .code-icon, #open-new:hover .open-new-icon {
+    opacity: 0; 
+}
+#code:hover .code-hover-icon, #open-new:hover .open-new-hover-icon {
+    opacity: 1; 
+}
+
+@media (max-width: 716px) {
+    .project-container {
+        display: flex;
+        flex-direction: column; 
+        padding: 0;
+    }
+    .img-container {
+        height: 15rem;
+        width: 23rem;
+    }
 }
