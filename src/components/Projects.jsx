@@ -1,6 +1,29 @@
 import './Projects.css'
+import { useState, useEffect } from 'react'
 
 export default function Projects() {
+
+    // swaps img src based on colour mode
+    const [codeSrc, setCodeSrc] = useState('/code.png')
+    const [openNewSrc, setOpenNewSrc] = useState('/open-new.png')
+    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    darkModeQuery.addEventListener('change', (event) => {
+        if (event.matches) {
+            setCodeSrc('/code-white.png')
+            setOpenNewSrc('/open-new-white.png')
+        }
+        else {
+            setCodeSrc('/code.png')
+            setOpenNewSrc('/open-new.png')
+        }
+    })
+    useEffect(() => {
+        if (darkModeQuery) {
+            setCodeSrc('/code-white.png')
+            setOpenNewSrc('/open-new-white.png')
+        }
+    }, [])
+
     return (
         <section id='projects'>
             <div className='projects-container'>
@@ -27,13 +50,13 @@ export default function Projects() {
                                 <div className='code-link'>
                                     <span>Code</span>
                                     <a 
-                                        href='#'
+                                        href='https://github.com/Pixz1/quiz-app'
                                         target='_blank'
                                         rel='noopener noreferrer'
                                         id='code'
                                     >
                                         <img 
-                                            src='/code.png' 
+                                            src={codeSrc}
                                             alt='Code Link' 
                                             className='code-icon'
                                             height='30px'
@@ -57,7 +80,7 @@ export default function Projects() {
                                         id='open-new'
                                     >
                                         <img 
-                                            src='/open-new.png' 
+                                            src={openNewSrc} 
                                             alt='Open in new window' 
                                             className='open-new-icon'
                                             height='30px'
@@ -74,6 +97,9 @@ export default function Projects() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div className='soon-tm'>
+                        <h2>More projects coming soon...</h2>
                     </div>
                 </div>
             </div>

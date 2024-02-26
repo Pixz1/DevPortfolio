@@ -17,7 +17,6 @@
 
 	background-color: light-dark(var(--light-bg), var(--dark-bg-secondary));
 	color: light-dark(var(--light-color), var(--dark-color));
-	/* color: light-dark(var(--colour-red), var(--colour-red)); */
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -27,6 +26,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	scrollbar-width: thin;
 }
 
 ::selection {

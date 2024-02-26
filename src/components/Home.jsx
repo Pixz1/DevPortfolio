@@ -54,7 +54,7 @@ export default function Home() {
                 </div>
                 <div className='home-content-bot'>
                     <div className='hero-heading'>
-                        <h1>A Front End<br/><span className='bot-second-line'>Developer</span></h1>
+                        <h1>A Software<br/><span className='bot-second-line'>Developer</span></h1>
                     </div>              
                 </div>
                 <div className='home-content-footer'>

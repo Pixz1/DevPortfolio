@@ -1,7 +1,7 @@
 #about {
     display: flex;
     padding: 8rem 0;
-    background-color: white;
+    background-color: light-dark(var(--light-bg-secondary), var(--dark-bg));
 }
 
 .about-container {
@@ -38,9 +38,6 @@
     max-width: 42rem;
     text-align: center;
     font-size: 1.2rem;
-}
-.about-info > p {
-    color: #41474c;
 }
 
 .about-tech {
