@@ -1,6 +1,24 @@
 import './Contact.css'
+import React, { useState, useRef } from 'react'
 
 export default function Contact() {
+
+    const [showForm, setShowForm] = useState(false)
+    const formRef = useRef(null)
+
+    const handleToggle = () => {
+        setShowForm(!showForm) 
+
+        console.log(formRef.current)
+
+        if (!showForm && formRef.current) {
+            // needs timer to adjust for delay in rendering and css change
+            setTimeout(() => {
+                formRef.current.scrollIntoView({ behavior: 'smooth' })
+            }, 50)
+        }
+    }
+
     return (
         <section id='contact'>
             <div className='contact-container'>
@@ -10,7 +28,7 @@ export default function Contact() {
                 <div className='contact-content'>
                     <h3>Feel free to get in contact with me via email below </h3>   
                 </div>
-                <div class="contact-box">
+                <div className="contact-email">
                     <span className='contact-span'>
                         <svg 
                             xmlns="http://www.w3.org/2000/svg" 
@@ -28,10 +46,36 @@ export default function Contact() {
                             <path d="M3 7l9 6l9 -6"></path>
                         </svg>
                     </span>
-                    <div class="contact__info">
+                    <div className="contact__info">
                         <h3>Mail</h3>
                         <a href="mailto:dehong.xu@outlook.com">dehong.xu@outlook.com</a>
                     </div>
+                </div>
+                <div className='form-title'>
+                    <h3>Prefer a contact form?</h3>   
+                    <label class="switch">
+                        <input type="checkbox" onChange={handleToggle}/>
+                        <span class="slider round"/>
+                    </label>
+                </div>
+                <div className={`form-content ${showForm ? 'show' : ''}`} ref={formRef}>
+                    <form action='#' method='post'>
+                        <div className='form-field'>
+                            <label className='form-label' for='name'>Name</label>
+                            <input id='name' className='form-input' required='' placeholder='Enter Your Name' type='text' name='name'/>
+                        </div>
+                        <div className='form-field'>
+                            <label className='form-label' for='email'>Email</label>
+                            <input id='email' className='form-input' required='' placeholder='Enter Your Email' type='email' name='email'/>
+                        </div>
+                        <div className='form-field'>
+                            <label className='form-label' for='message'>Message</label>
+                            <textarea id='message' className='form-input' required='' placeholder='Enter Your Message' name='message' 
+                                rows='7'
+                            />
+                        </div>
+                        <button className='submit-btn' type='submit'>Submit</button>
+                    </form>
                 </div>
             </div>
         </section>

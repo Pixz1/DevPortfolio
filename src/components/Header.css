@@ -5,7 +5,7 @@
     background-color: light-dark(var(--light-bg-secondary), var(--dark-bg));
     height: 5rem;
     width: 100%;
-    box-shadow: 0 0 10px rgba(0,0,0,.09);
+    box-shadow: 0 0 3px light-dark(var(--light-shadow), var(--dark-shadow));
     position: fixed;
     z-index: 1000;
 }
