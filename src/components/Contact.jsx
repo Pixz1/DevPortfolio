@@ -1,5 +1,5 @@
 import './Contact.css'
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 export default function Contact() {
 
@@ -18,6 +18,20 @@ export default function Contact() {
             }, 50)
         }
     }
+
+    // resets form when redirected by formspree
+    useEffect(() => {
+        window.onbeforeunload = () => {
+            for (const form of document.getElementsByTagName('form'))
+            {
+                form.reset()
+            }
+        }
+
+        return () => {
+            window.onbeforeunload = null
+        }
+    }, [])
 
     return (
         <section id='contact'>
