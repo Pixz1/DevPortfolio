@@ -78,25 +78,26 @@
 }
 .code-link a, .live-link a {
     display: inline-block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    line-height: 25px;
     text-align: center;
 }
-.code-icon, .open-new-icon {
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
-    position: absolute; 
+.code-link a {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 0.5rem;
 }
-.code-hover-icon, .open-new-hover-icon {
-    opacity: 0; 
-    transition: opacity 0.3s ease-in-out; 
+.live-link a {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 0.3rem;
 }
-#code:hover .code-icon, #open-new:hover .open-new-icon {
-    opacity: 0; 
+.new-window-svg path {
+    stroke: currentColor;
 }
-#code:hover .code-hover-icon, #open-new:hover .open-new-hover-icon {
-    opacity: 1; 
+a:hover .new-window-svg path {
+    stroke: var(--color-primary);
 }
 
 @media (max-width: 716px) {
@@ -111,6 +112,7 @@
     }
 }
 
+/* tooltip for link not available */
 .live-link {
     position: relative;
 }
