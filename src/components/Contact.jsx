@@ -59,18 +59,18 @@ export default function Contact() {
                     </label>
                 </div>
                 <div className={`form-content ${showForm ? 'show' : ''}`} ref={formRef}>
-                    <form action='#' method='post'>
+                    <form action='https://formspree.io/f/xoqgwwoe' method='post'>
                         <div className='form-field'>
                             <label className='form-label' for='name'>Name</label>
-                            <input id='name' className='form-input' required='' placeholder='Enter Your Name' type='text' name='name'/>
+                            <input id='name' className='form-input' required placeholder='Enter Your Name' type='text' name='name'/>
                         </div>
                         <div className='form-field'>
                             <label className='form-label' for='email'>Email</label>
-                            <input id='email' className='form-input' required='' placeholder='Enter Your Email' type='email' name='email'/>
+                            <input id='email' className='form-input' required placeholder='Enter Your Email' type='email' name='email'/>
                         </div>
                         <div className='form-field'>
                             <label className='form-label' for='message'>Message</label>
-                            <textarea id='message' className='form-input' required='' placeholder='Enter Your Message' name='message' 
+                            <textarea id='message' className='form-input' required placeholder='Enter Your Message' name='message' 
                                 rows='7'
                             />
                         </div>
