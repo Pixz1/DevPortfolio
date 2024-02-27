@@ -29,7 +29,7 @@ export default function Home() {
             <div className='home-container'>
                 <div className='home-content-top'>
                     <div className='hero-heading'>
-                        <h1>Hello I'm<br/> <span className='top-second-line'>Dehong Xu</span></h1>
+                        <h1>Hello I'm<br/> <span className='top-second-line'>David Xu</span></h1>
                     </div>
                     <div className='hero-icons'>
                         <a 
@@ -54,7 +54,7 @@ export default function Home() {
                 </div>
                 <div className='home-content-bot'>
                     <div className='hero-heading'>
-                        <h1>A Software<br/><span className='bot-second-line'>Developer</span></h1>
+                        <h1>Software<br/><span className='bot-second-line'>Developer</span></h1>
                     </div>              
                 </div>
                 <div className='home-content-footer'>
