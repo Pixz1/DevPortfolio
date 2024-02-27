@@ -10,7 +10,7 @@ export default function Projects() {
                 <div className='projects-content'>
                     <div className='project-container'>
                         <div className='img-container'>
-                            <img src='/quiz-main.PNG' alt='project image' className='project-img'/>
+                            <img src='/DevPortfolio/quiz-main.PNG' alt='project image' className='project-img'/>
                         </div>
                         <div className='project-details'>
                             <div className='title'>
