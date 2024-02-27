@@ -94,6 +94,9 @@ export default function Projects() {
                                             width='30px'
                                         />
                                     </a>
+                                    <span className='tooltip-text'>
+                                        Link currently not available
+                                    </span>
                                 </div>
                             </div>
                         </div>
