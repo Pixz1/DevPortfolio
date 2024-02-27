@@ -9,7 +9,20 @@
     padding: 3rem 0;
 }
 
-.footer > .hero-icons {
+.link-icons {
     display: flex;
     flex-direction: row;
+    gap: 1rem;
+}
+.link-icons > a {
+    display: flex;
+    align-items: center;
+}
+
+.linkedin-svg, .github-svg path {
+    fill: currentColor;
+}
+
+a:hover .github-svg path, a:hover .linkedin-svg path {
+    fill: var(--color-primary);
 }
