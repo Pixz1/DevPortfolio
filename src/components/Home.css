@@ -11,7 +11,6 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .home-container {
     margin: 0 auto;
     max-width: 1200px;
@@ -22,7 +21,7 @@
     min-height: 100vh;
 }
 
-.home-content-top {
+.top-content {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -30,97 +29,88 @@
     padding-top: 5rem;
     flex-grow: 1;
 }
-
-.hero-heading {
-    text-align: center;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    font-family: 'Osake', serif;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-.top-second-line, .bot-second-line {
-    display: block;
-    padding-top: 7rem;
-}
-
-.home-content-bot {
+.bot-content {
     display: flex;
     align-items: flex-end;
     margin-left: 1.3rem;
     flex-grow: 1;
 }
-
-.home-content-footer {
+.footer-content {
     text-align: center;
 }
 
-.hero-icons {
+.content-heading {
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-family: 'Osake', serif;
+    font-size: 1.5rem;
+
+}
+.heading-second-line {
+    display: block;
+    padding-top: 7rem;
+}
+
+.content-icons {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    gap: 0.5rem;
+    padding-right: 2rem;
+    margin-top: 2rem;
 }
 
-/* github and linkedin hover effect */
-#linked, #github {
-    margin: 0;
+.linkedin-svg, .github-svg path {
+    fill: currentColor;
 }
-.linked-icon, .github-icon {
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
-    position: absolute; 
-}
-.linked-hover-icon, .github-hover-icon {
-    opacity: 0; 
-    transition: opacity 0.3s ease-in-out; 
-}
-#linked:hover .linked-icon, #github:hover .github-icon {
-    opacity: 0; 
-}
-#linked:hover .linked-hover-icon, #github:hover .github-hover-icon {
-    opacity: 1; 
+a:hover .github-svg path, a:hover .linkedin-svg path {
+    fill: var(--color-primary);
 }
 
 @media (max-width: 1024px) {
     .home-container {
         padding: 0;
     }
-    .hero-heading {
+    .content-heading {
         font-size: 0.8rem;
         text-align: left;
         padding-top: 1rem;
     }
-    .home-content-top, .home-content-bot {
+    .top-content, .bot-content {
         margin: 0;
     }
-
-    .top-second-line, .bot-second-line {
+    .heading-second-line {
         padding-top: 3rem;
     }
-    .home-content-footer {
+    .footer-content {
         margin-top: 0;
         font-size: 0.7rem;
     }
-    .hero-icons {
+    .content-icons {
         display: flex;
         flex-direction: column;
+        padding-right: 0;
+        margin-top: 0;
     }
 }
 
 @media (max-width: 1440px) and (orientation: landscape) {
-    .hero-heading {
+    .content-heading {
         writing-mode: horizontal-tb;
         font-size: 0.7rem;
         margin-bottom: 1rem;
     }
-    .top-second-line, .bot-second-line {
+    .heading-second-line {
         padding: 0;
     }
-    .home-content-top > .hero-heading {
+    .top-content > .content-heading {
         text-align: right;
     }
-    .hero-icons {
+    .content-icons {
         flex-direction: row;
         justify-content: flex-end;
+        padding-right: 0;
+        margin-top: 0;
     }
 }
