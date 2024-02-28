@@ -1,7 +1,7 @@
+/* boilerplate section */
 #contact {
     display: flex;
     padding: 8rem 0;
-    background-color: light-dark(var(--light-bg-secondary), var(--dark-bg));
 }
 .contact-container {
     margin: 0 auto;
@@ -25,12 +25,13 @@
     top: calc(100% + 1.5rem);
     height: 5px;
     width: 3rem;
-    background: #D33C39;
+    background: var(--color-primary);
     left: 50%;
     transform: translateX(-50%);
     border-radius: 5px;
 }
 
+/* contact email section */
 .contact-email {
     display: flex;
     align-items: center;
@@ -44,16 +45,15 @@
     border-radius: 50%;
     height: 3rem;
     width: 3rem;
-    box-shadow: 0 0 10px light-dark(var(--light-shadow), var(--dark-shadow));
 }
 
+/* contact form section */
 .form-title {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
     align-items: center;
 }
-
 .switch {
     position: relative;
     display: inline-block;
@@ -111,8 +111,6 @@ input:checked + .slider:before {
     max-width: 45rem;
     width: 95%;
     padding: 3rem;
-    background-color: light-dark(var(--light-bg), var(--dark-bg-secondary));
-    box-shadow: 0px 5px 10px 0px light-dark(var(--light-shadow), var(--dark-shadow));
     border-radius: 10px;
     text-align: right;
     display: none;
@@ -129,18 +127,14 @@ input:checked + .slider:before {
     margin-bottom: 2rem;
 }
 .form-label {
-    color: light-dark(var(--light-color), var(--dark-color));
     display: block;
     text-align: left;
     margin-bottom: 0.5rem;
 }
 .form-input {
-    color: light-dark(var(--light-color), var(--dark-color));
     padding: 0.7rem;
     width: 100%;
-    border: 1px solid light-dark(var(--light-bg-secondary), var(--dark-bg));
     font-size: 1.1rem;
-    background: light-dark(var(--light-bg-secondary), var(--dark-bg));
     border-radius: 5px;
 }
 .form-input:focus {
@@ -150,9 +144,59 @@ input:checked + .slider:before {
     width: 25%;
     padding: 0.7rem;
     font-size: 1.1rem;
-    background-color: light-dark(var(--light-bg-secondary), var(--dark-bg));
-    box-shadow: 0px 1px 2px 0px light-dark(var(--light-shadow), var(--dark-shadow));
     border-radius: 10px;
     border: none;
     cursor: pointer;
+}
+.submit-btn:hover {
+    color: var(--color-primary);
+}
+
+@media (prefers-color-scheme: light) {
+    #contact {
+        background-color: var(--light-bg-secondary);
+    }
+    .contact-span {
+        box-shadow: 0 0 10px var(--light-shadow)
+    }
+    .form-content {
+        background-color: var(--light-bg);
+        box-shadow: 0px 5px 10px 0px var(--light-shadow)
+    }
+    .form-label {
+        color: var(--light-color)
+    }
+    .form-input {
+        color: var(--light-color);
+        border: 1px solid var(--light-bg-secondary);
+        background: var(--light-bg-secondary)
+    }
+    .submit-btn {
+        background-color: var(--light-bg-secondary);
+        box-shadow: 0px 1px 2px 0px var(--light-shadow);
+    }
+}
+@media (prefers-color-scheme: dark) {
+    #contact {
+        background-color: var(--dark-bg);
+    }
+    .contact-span {
+        box-shadow: 0 0 10px var(--dark-shadow)
+    }
+    .form-content {
+        background-color: var(--dark-bg-secondary);
+        box-shadow: 0px 5px 10px 0px var(--dark-shadow)
+    }
+    .form-label {
+        color: var(--dark-color)
+    }
+    .form-input {
+        color: var(--dark-color);
+        border: 1px solid var(--dark-bg);
+        background: var(--dark-bg)
+    }
+    .submit-btn {
+        background-color: var(--dark-bg);
+        box-shadow: 0px 1px 2px 0px var(--dark-shadow);
+    }
 }

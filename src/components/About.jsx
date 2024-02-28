@@ -9,9 +9,10 @@ export default function About() {
                 </div>
                 <div className='about-info'>
                     <p>
-                        I am an aspiring fullstack developer, currently focusing on mastering front-end 
-                        development. I'm open to job opportunities where i can contribute, learn and grow. If you
-                        think you have a good opportunity for me then don't hesitate to contact me
+                        I am an aspiring software developer, currently focusing on mastering front-end 
+                        development. I'm eager to apply my skills in a collaborative environment where I can
+                        learn, grow, and contribute to meaningful projects. If you're looking for a motivated 
+                        and adaptable developer, please reach out!
                     </p>
                 </div>
                 <div className='about-tech'>

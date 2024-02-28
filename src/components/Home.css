@@ -20,7 +20,6 @@
     flex-direction: column;
     min-height: 100vh;
 }
-
 .top-content {
     display: flex;
     justify-content: flex-start;
@@ -38,20 +37,19 @@
 .footer-content {
     text-align: center;
 }
-
 .content-heading {
     text-align: center;
     writing-mode: vertical-rl;
     text-orientation: upright;
     font-family: 'Osake', serif;
     font-size: 1.5rem;
-
 }
 .heading-second-line {
     display: block;
     padding-top: 7rem;
 }
 
+/* linkedin and github icon settings */
 .content-icons {
     display: flex;
     flex-direction: column;
@@ -60,7 +58,6 @@
     padding-right: 2rem;
     margin-top: 2rem;
 }
-
 .linkedin-svg, .github-svg path {
     fill: currentColor;
 }
@@ -68,6 +65,7 @@ a:hover .github-svg path, a:hover .linkedin-svg path {
     fill: var(--color-primary);
 }
 
+/* mobile and tablet settings (WIP) */
 @media (max-width: 1024px) {
     .home-container {
         padding: 0;
@@ -93,9 +91,12 @@ a:hover .github-svg path, a:hover .linkedin-svg path {
         padding-right: 0;
         margin-top: 0;
     }
+    .linkedin-svg, .github-svg {
+        height: 25px;
+        width: 25px;
+    }
 }
-
-@media (max-width: 1440px) and (orientation: landscape) {
+@media (max-width: 1000px) and (orientation: landscape) {
     .content-heading {
         writing-mode: horizontal-tb;
         font-size: 0.7rem;

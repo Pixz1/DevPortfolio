@@ -1,7 +1,16 @@
 #about {
     display: flex;
     padding: 8rem 0;
-    background-color: light-dark(var(--light-bg-secondary), var(--dark-bg));
+}
+@media (prefers-color-scheme: light) {
+    #about {
+        background-color: var(--light-bg-secondary);
+    }
+}
+@media (prefers-color-scheme: dark) {
+    #about {
+        background-color: var(--dark-bg);
+    }
 }
 
 .about-container {
@@ -28,7 +37,7 @@
     top: calc(100% + 1.5rem);
     height: 5px;
     width: 3rem;
-    background: #D33C39;
+    background: var(--color-primary);
     left: 50%;
     transform: translateX(-50%);
     border-radius: 5px;

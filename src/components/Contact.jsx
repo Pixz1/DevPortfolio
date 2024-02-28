@@ -9,8 +9,6 @@ export default function Contact() {
     const handleToggle = () => {
         setShowForm(!showForm) 
 
-        console.log(formRef.current)
-
         if (!showForm && formRef.current) {
             // needs timer to adjust for delay in rendering and css change
             setTimeout(() => {
