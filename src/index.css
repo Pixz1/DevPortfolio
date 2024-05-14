@@ -1,57 +1,86 @@
 :root {
-	font-family: 'Protest Riot', sans-serif;
-	line-height: 1.5;
+    font-family: "Protest Riot", sans-serif;
+    line-height: 1.5;
 
-	color-scheme: light dark;
-	
-	--color-primary: #D33C39;
+    /* color-scheme: light dark; */
 
-	--light-bg: #FBFBFB;
-	--light-bg-secondary: #f1f1f1;
-	--light-color: #212427;
-	--light-shadow: rgba(100, 100, 111, 0.4);
+    --color-primary: #d33c39;
 
-	--dark-bg: #121212;
-	--dark-bg-secondary: #232323;
-	--dark-color: #ffffff;
-	--dark-shadow: rgba(210, 210, 210, 0.4);
+    --light-bg: #fbfbfb;
+    --light-bg-secondary: #f1f1f1;
+    --light-color: #212427;
+    --light-shadow: rgba(100, 100, 111, 0.4);
 
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
+    --dark-bg: #121212;
+    --dark-bg-secondary: #232323;
+    --dark-color: #ffffff;
+    --dark-shadow: rgba(210, 210, 210, 0.4);
 
-	scroll-behavior: smooth;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+
+    scroll-behavior: smooth;
 }
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	scrollbar-width: thin;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: thin;
 }
 
 ::selection {
-	background: var(--color-primary);
+    background: var(--color-primary);
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
-@media (prefers-color-scheme: light) {
-	:root {
-		background-color: var(--light-bg);
-		color: var(--light-color);
-	}
-	a {
-		color: var(--light-color);
-	}
+[data-theme="dark"] {
+    /* START: General Style */
+    a {
+        color: var(--dark-color);
+    }
+    /* END: General Style */
+
+    /* START: Header Style */
+    .navbar {
+        background-color: var(--dark-bg);
+        box-shadow: 0 0 3px var(--dark-shadow);
+    }
+    .nav-links {
+        background-color: var(--dark-bg);
+    }
+    .nav-link {
+        color: var(--dark-color);
+    }
+    .bar {
+        background-color: var(--light-bg);
+    }
+    /* END: Header Style */
 }
-@media (prefers-color-scheme: dark) {
-	:root {
-		background-color: var(--dark-bg-secondary);
-		color: var(--dark-color);
-	}
-	a {
-		color: var(--dark-color);
-	}
+
+[data-theme="light"] {
+    /* START: General Style */
+    a {
+        color: var(--light-color);
+    }
+    /* END: General Style */
+
+    /* START: Header Style */
+    .navbar {
+        background-color: var(--light-bg-secondary);
+        box-shadow: 0 0 3px var(--light-shadow);
+    }
+    .nav-links {
+        background-color: var(--light-bg-secondary);
+    }
+    .nav-link {
+        color: var(--light-color);
+    }
+    .bar {
+        background-color: var(--dark-bg);
+    }
+    /* END: Header Style */
 }
