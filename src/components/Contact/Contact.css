@@ -20,7 +20,7 @@
     position: relative;
 }
 .contact-heading::after {
-    content: '';
+    content: "";
     position: absolute;
     top: calc(100% + 1.5rem);
     height: 5px;
@@ -73,8 +73,8 @@
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 }
 .slider:before {
     position: absolute;
@@ -85,9 +85,9 @@
     left: 4px;
     bottom: 4px;
     background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-} 
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
 input:checked + .slider {
     background-color: var(--color-primary);
 }
@@ -101,7 +101,7 @@ input:checked + .slider:before {
 }
 .slider.round {
     border-radius: 34px;
-}  
+}
 .slider.round:before {
     border-radius: 50%;
 }
@@ -150,53 +150,4 @@ input:checked + .slider:before {
 }
 .submit-btn:hover {
     color: var(--color-primary);
-}
-
-@media (prefers-color-scheme: light) {
-    #contact {
-        background-color: var(--light-bg-secondary);
-    }
-    .contact-span {
-        box-shadow: 0 0 10px var(--light-shadow)
-    }
-    .form-content {
-        background-color: var(--light-bg);
-        box-shadow: 0px 5px 10px 0px var(--light-shadow)
-    }
-    .form-label {
-        color: var(--light-color)
-    }
-    .form-input {
-        color: var(--light-color);
-        border: 1px solid var(--light-bg-secondary);
-        background: var(--light-bg-secondary)
-    }
-    .submit-btn {
-        background-color: var(--light-bg-secondary);
-        box-shadow: 0px 1px 2px 0px var(--light-shadow);
-    }
-}
-@media (prefers-color-scheme: dark) {
-    #contact {
-        background-color: var(--dark-bg);
-    }
-    .contact-span {
-        box-shadow: 0 0 10px var(--dark-shadow)
-    }
-    .form-content {
-        background-color: var(--dark-bg-secondary);
-        box-shadow: 0px 5px 10px 0px var(--dark-shadow)
-    }
-    .form-label {
-        color: var(--dark-color)
-    }
-    .form-input {
-        color: var(--dark-color);
-        border: 1px solid var(--dark-bg);
-        background: var(--dark-bg)
-    }
-    .submit-btn {
-        background-color: var(--dark-bg);
-        box-shadow: 0px 1px 2px 0px var(--dark-shadow);
-    }
 }

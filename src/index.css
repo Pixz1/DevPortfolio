@@ -2,19 +2,17 @@
     font-family: "Protest Riot", sans-serif;
     line-height: 1.5;
 
-    /* color-scheme: light dark; */
-
     --color-primary: #d33c39;
 
     --light-bg: #fbfbfb;
     --light-bg-secondary: #f1f1f1;
-    --light-color: #212427;
-    --light-shadow: rgba(100, 100, 111, 0.4);
+    --light-color: #ffffff;
+    --light-shadow: rgba(210, 210, 210, 0.4);
 
     --dark-bg: #121212;
     --dark-bg-secondary: #232323;
-    --dark-color: #ffffff;
-    --dark-shadow: rgba(210, 210, 210, 0.4);
+    --dark-color: #212427;
+    --dark-shadow: rgba(100, 100, 111, 0.4);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -29,58 +27,156 @@
     scrollbar-width: thin;
 }
 
-::selection {
+/* ::selection {
     background: var(--color-primary);
-}
+} */
 
-a {
-    text-decoration: none;
+/* linkedin and github component css */
+.linkedin-svg,
+.github-svg path {
+    fill: currentColor;
+}
+a:hover .github-svg path,
+a:hover .linkedin-svg path {
+    fill: var(--color-primary);
 }
 
 [data-theme="dark"] {
     /* START: General Style */
     a {
-        color: var(--dark-color);
+        color: var(--light-color);
     }
     /* END: General Style */
 
     /* START: Header Style */
-    .navbar {
+    .header {
         background-color: var(--dark-bg);
         box-shadow: 0 0 3px var(--dark-shadow);
     }
     .nav-links {
         background-color: var(--dark-bg);
     }
-    .nav-link {
-        color: var(--dark-color);
-    }
     .bar {
         background-color: var(--light-bg);
     }
     /* END: Header Style */
+
+    /* START: Home, About, Projects Style */
+    #home,
+    #projects {
+        background-color: var(--dark-bg-secondary);
+        color: var(--light-color);
+    }
+    #about {
+        background-color: var(--dark-bg);
+        color: var(--light-color);
+    }
+    .tooltip-text {
+        background-color: var(--dark-bg);
+        color: var(--color-primary);
+    }
+    /* END: Home, About, Projects Style */
+
+    /* START: Contact Style */
+    #contact {
+        background-color: var(--dark-bg);
+        color: var(--light-color);
+    }
+    .contact-span {
+        box-shadow: 0 0 10px var(--dark-shadow);
+    }
+    .form-content {
+        background-color: var(--dark-bg-secondary);
+        box-shadow: 0px 5px 10px 0px var(--dark-shadow);
+    }
+    .form-label {
+        color: var(--light-color);
+    }
+    .form-input {
+        color: var(--light-color);
+        border: 1px solid var(--dark-bg);
+        background: var(--dark-bg);
+    }
+    .submit-btn {
+        background-color: var(--dark-bg);
+        box-shadow: 0px 1px 2px 0px var(--dark-shadow);
+    }
+    /* END: Contact Style */
+
+    /* START: Footer Style */
+    .footer {
+        background-color: var(--dark-bg-secondary);
+        color: var(--light-color);
+    }
+    /* END: Footer Style */
 }
 
 [data-theme="light"] {
     /* START: General Style */
     a {
-        color: var(--light-color);
+        color: var(--dark-color);
     }
     /* END: General Style */
 
     /* START: Header Style */
-    .navbar {
+    .header {
         background-color: var(--light-bg-secondary);
         box-shadow: 0 0 3px var(--light-shadow);
     }
     .nav-links {
         background-color: var(--light-bg-secondary);
     }
-    .nav-link {
-        color: var(--light-color);
-    }
     .bar {
         background-color: var(--dark-bg);
     }
     /* END: Header Style */
+
+    /* START: Home, About, Projects Style */
+    #home,
+    #projects {
+        background-color: var(--light-bg);
+        color: var(--dark-color);
+    }
+    #about {
+        background-color: var(--light-bg-secondary);
+        color: var(--dark-color);
+    }
+    .tooltip-text {
+        background-color: var(--light-bg-secondary);
+        color: var(--color-primary);
+    }
+    /* END: Home, About, Projects Style */
+
+    /* START: Contact Style */
+    #contact {
+        background-color: var(--light-bg-secondary);
+        color: var(--dark-color);
+    }
+    .contact-span {
+        box-shadow: 0 0 10px var(--light-shadow);
+    }
+    .form-content {
+        background-color: var(--light-bg);
+        box-shadow: 0px 5px 10px 0px var(--light-shadow);
+    }
+    .form-label {
+        color: var(--dark-color);
+    }
+    .form-input {
+        color: var(--dark-color);
+        border: 1px solid var(--light-bg-secondary);
+        background: var(--light-bg-secondary);
+    }
+    .submit-btn {
+        background-color: var(--light-bg-secondary);
+        box-shadow: 0px 1px 2px 0px var(--light-shadow);
+    }
+    /* END: Contact Style */
+
+    /* START: Footer Style */
+    .footer {
+        background-color: var(--light-bg);
+        color: var(--dark-color);
+    }
+    /* END: Footer Style */
 }

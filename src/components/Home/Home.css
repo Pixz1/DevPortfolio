@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'Osake';
-    src: url('../font/Osake-font.otf') format('opentype');
+    font-family: "Osake";
+    src: url("../../font/Osake-font.otf") format("opentype");
 }
 
 #home {
     height: 100vh;
     display: flex;
-    background-image: url('/background.png');
+    background-image: url("/background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -41,7 +41,7 @@
     text-align: center;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    font-family: 'Osake', serif;
+    font-family: "Osake", serif;
     font-size: 1.5rem;
 }
 .heading-second-line {
@@ -58,12 +58,6 @@
     padding-right: 2rem;
     margin-top: 2rem;
 }
-.linkedin-svg, .github-svg path {
-    fill: currentColor;
-}
-a:hover .github-svg path, a:hover .linkedin-svg path {
-    fill: var(--color-primary);
-}
 
 /* mobile and tablet settings (WIP) */
 @media (max-width: 1024px) {
@@ -75,7 +69,8 @@ a:hover .github-svg path, a:hover .linkedin-svg path {
         text-align: left;
         padding-top: 1rem;
     }
-    .top-content, .bot-content {
+    .top-content,
+    .bot-content {
         margin: 0;
     }
     .heading-second-line {
@@ -91,7 +86,8 @@ a:hover .github-svg path, a:hover .linkedin-svg path {
         padding-right: 0;
         margin-top: 0;
     }
-    .linkedin-svg, .github-svg {
+    .linkedin-svg,
+    .github-svg {
         height: 25px;
         width: 25px;
     }

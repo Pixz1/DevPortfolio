@@ -2,16 +2,6 @@
     display: flex;
     padding: 8rem 0;
 }
-@media (prefers-color-scheme: light) {
-    #about {
-        background-color: var(--light-bg-secondary);
-    }
-}
-@media (prefers-color-scheme: dark) {
-    #about {
-        background-color: var(--dark-bg);
-    }
-}
 
 .about-container {
     margin: 0 auto;
@@ -32,7 +22,7 @@
 }
 
 .about-heading::after {
-    content: '';
+    content: "";
     position: absolute;
     top: calc(100% + 1.5rem);
     height: 5px;

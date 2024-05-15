@@ -13,7 +13,7 @@ const ThemeSwitcher = () => {
 
     return (
         <button className="theme-toggle" onClick={toggleTheme}>
-            Click Here
+            Light/Dark
         </button>
     );
 };

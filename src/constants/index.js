@@ -43,3 +43,6 @@ export const links = [
         linkName: "Contact",
     },
 ];
+
+export const aboutInfo =
+    "I am an aspiring software developer, currently focusing on mastering front-end development. I'm eager to apply my skills in a collaborative environment where I can learn, grow, and contribute to meaningful projects. If you're looking for a motivated and adaptable developer, please reach out!";

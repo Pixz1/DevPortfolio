@@ -1,8 +1,8 @@
 import "./Header.css";
 import React, { useState, useEffect } from "react";
 
-import ThemeSwitcher from "./ThemeSwitcher";
-import { links } from "../constants";
+import ThemeSwitcher from "../ThemeSwitcher";
+import { links } from "../../constants";
 
 export default function Header() {
     // open/close menu (mobile)
@@ -31,24 +31,26 @@ export default function Header() {
     }, [menuOpen]);
 
     return (
-        <div className="navbar">
+        <header className="header">
             <nav>
-                <a href="#">
+                <a href="#" className="logo">
                     <h2>davo.dev</h2>
                 </a>
 
                 <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
                     <ThemeSwitcher />
-                    {links.map((link, index) =>
+                    {links.map((link, index) => (
                         <a
                             key={index}
                             href={link.href}
                             className={link.className}
                             onClick={eval(link.onClick)}
-                        >{link.linkName}</a>
-                    )}
+                        >
+                            {link.linkName}
+                        </a>
+                    ))}
                 </ul>
-                
+
                 <div
                     className={`hamburger ${menuOpen ? "active" : ""}`}
                     onClick={toggleMenu}
@@ -58,6 +60,6 @@ export default function Header() {
                     <span className="bar"></span>
                 </div>
             </nav>
-        </div>
+        </header>
     );
 }
