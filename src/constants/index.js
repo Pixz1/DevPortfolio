@@ -16,3 +16,30 @@ export const techStack = [
         altText: "React",
     },
 ];
+
+export const links = [
+    {
+        href: "#home",
+        className: "nav-link",
+        onClick: "toggleMenu",
+        linkName: "Home",
+    },
+    {
+        href: "#about",
+        className: "nav-link",
+        onClick: "toggleMenu",
+        linkName: "About",
+    },
+    {
+        href: "#projects",
+        className: "nav-link",
+        onClick: "toggleMenu",
+        linkName: "Projects",
+    },
+    {
+        href: "#contact",
+        className: "nav-link",
+        onClick: "toggleMenu",
+        linkName: "Contact",
+    },
+];

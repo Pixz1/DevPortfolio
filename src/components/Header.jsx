@@ -1,9 +1,11 @@
 import "./Header.css";
 import React, { useState, useEffect } from "react";
+
 import ThemeSwitcher from "./ThemeSwitcher";
+import { links } from "../constants";
 
 export default function Header() {
-    // open/close menu
+    // open/close menu (mobile)
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -34,45 +36,19 @@ export default function Header() {
                 <a href="#">
                     <h2>davo.dev</h2>
                 </a>
+
                 <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
                     <ThemeSwitcher />
-                    <li>
+                    {links.map((link, index) =>
                         <a
-                            href="#home"
-                            className="nav-link"
-                            onClick={toggleMenu}
-                        >
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#about"
-                            className="nav-link"
-                            onClick={toggleMenu}
-                        >
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#projects"
-                            className="nav-link"
-                            onClick={toggleMenu}
-                        >
-                            Projects
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#contact"
-                            className="nav-link"
-                            onClick={toggleMenu}
-                        >
-                            Contact
-                        </a>
-                    </li>
+                            key={index}
+                            href={link.href}
+                            className={link.className}
+                            onClick={eval(link.onClick)}
+                        >{link.linkName}</a>
+                    )}
                 </ul>
+                
                 <div
                     className={`hamburger ${menuOpen ? "active" : ""}`}
                     onClick={toggleMenu}
