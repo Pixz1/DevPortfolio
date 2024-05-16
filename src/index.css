@@ -12,7 +12,7 @@
     --dark-bg: #121212;
     --dark-bg-secondary: #232323;
     --dark-color: #212427;
-    --dark-shadow: rgba(100, 100, 111, 0.4);
+    --dark-shadow: rgba(76, 76, 84, 0.4);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -24,7 +24,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    scrollbar-width: thin;
+    scrollbar-width: none;
 }
 
 /* ::selection {
@@ -41,6 +41,7 @@ a:hover .linkedin-svg path {
     fill: var(--color-primary);
 }
 
+/* Dark and light color theme control */
 [data-theme="dark"] {
     /* START: General Style */
     a {
@@ -51,7 +52,7 @@ a:hover .linkedin-svg path {
     /* START: Header Style */
     .header {
         background-color: var(--dark-bg);
-        box-shadow: 0 0 3px var(--dark-shadow);
+        box-shadow: 0 0 1px 0 var(--light-shadow);
     }
     .nav-links {
         background-color: var(--dark-bg);
