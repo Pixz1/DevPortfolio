@@ -2,6 +2,8 @@
 #contact {
     display: flex;
     padding: 8rem 0;
+    height: 100vh;
+    align-items: center;
 }
 .contact-container {
     margin: 0 auto;

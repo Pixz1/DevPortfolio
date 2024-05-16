@@ -8,12 +8,24 @@ export const techStack = [
         altText: "Css",
     },
     {
+        iconUrl: "https://skillicons.dev/icons?i=tailwind",
+        altText: "TailWind",
+    },
+    {
         iconUrl: "https://skillicons.dev/icons?i=js",
         altText: "JavaScript",
     },
     {
+        iconUrl: "https://skillicons.dev/icons?i=ts",
+        altText: "TypeScript",
+    },
+    {
         iconUrl: "https://skillicons.dev/icons?i=react",
         altText: "React",
+    },
+    {
+        iconUrl: "https://skillicons.dev/icons?i=nextjs",
+        altText: "NextJS",
     },
 ];
 
