@@ -38,12 +38,12 @@ export default function Projects() {
 
                             <div className="links">
                                 <div className="link">
-                                    <span>Code</span>
-                                    <Github />
+                                    <span className="link-span">Code</span>
+                                    <Github width={25} height={25} />
                                 </div>
 
                                 <div className="link">
-                                    <span>Live Demo</span>
+                                    <span className="link-span">Live Demo</span>
                                     <ProjectLink link="https://www.google.com/" />
                                 </div>
                             </div>

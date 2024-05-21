@@ -70,16 +70,22 @@
     margin-top: 1rem;
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 link {
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
-link a {
+.link-span {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+/* link a {
     display: inline-block;
     width: 30px;
     height: 30px;
-}
+} */
 
 .new-window-svg path {
     stroke: currentColor;
