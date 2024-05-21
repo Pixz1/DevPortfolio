@@ -72,10 +72,6 @@ a:hover .linkedin-svg path {
         background-color: var(--dark-bg);
         color: var(--light-color);
     }
-    .tooltip-text {
-        background-color: var(--dark-bg);
-        color: var(--color-primary);
-    }
     /* END: Home, About, Projects Style */
 
     /* START: Contact Style */
@@ -100,6 +96,7 @@ a:hover .linkedin-svg path {
     }
     .submit-btn {
         background-color: var(--dark-bg);
+        color: var(--light-color);
         box-shadow: 0px 1px 2px 0px var(--dark-shadow);
     }
     /* END: Contact Style */
@@ -170,6 +167,7 @@ a:hover .linkedin-svg path {
     }
     .submit-btn {
         background-color: var(--light-bg-secondary);
+        color: var(--dark-color);
         box-shadow: 0px 1px 2px 0px var(--light-shadow);
     }
     /* END: Contact Style */
