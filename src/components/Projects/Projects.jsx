@@ -1,7 +1,28 @@
+import { useState } from 'react'
+
 import "./Projects.css";
 import { Github, ProjectLink } from "../Icons";
+import { projects } from "../../constants";
 
 export default function Projects() {
+    const [projectIndex, setProjectIndex] = useState(0);
+
+    const handlePrevProject = () => {
+        if (projectIndex > 0) {
+            setProjectIndex(projectIndex - 1)
+        } else {
+            setProjectIndex(projects.length - 1)
+        }
+    }
+
+    const handleNextProject = () => {
+        if (projectIndex < projects.length - 1) {
+            setProjectIndex(projectIndex + 1)
+        } else {
+            setProjectIndex(0)
+        }
+    }
+
     return (
         <section id="projects">
             <div className="projects-container">
@@ -13,7 +34,7 @@ export default function Projects() {
                     <div className="project-container">
                         <div className="img-container">
                             <img
-                                src="/DevPortfolio/quiz-main.PNG"
+                                src={projects[projectIndex].imgSrc}
                                 alt="project image"
                                 className="project-img"
                             />
@@ -21,39 +42,34 @@ export default function Projects() {
 
                         <div className="project-details">
                             <div className="title">
-                                <h2>Quizzy Time</h2>
+                                <h2>{projects[projectIndex].title}</h2>
                             </div>
 
                             <hr className="project-divider" />
 
                             <div className="description">
-                                <p>
-                                    Quizzy Time is a simple quiz web
-                                    application, built with react using api from
-                                    opentdb. Currently it has the following
-                                    features: quiz progression, timer, hint, and
-                                    navigation between questions.
-                                </p>
+                                <p>{projects[projectIndex].description}</p>
                             </div>
 
                             <div className="links">
                                 <div className="link">
-                                    <span className="link-span">Code</span>
-                                    <Github width={25} height={25} />
+                                    <span>Code</span>
+                                    <Github width={25} height={25} 
+                                        link={projects[projectIndex].link1}
+                                    />
                                 </div>
 
                                 <div className="link">
-                                    <span className="link-span">Live Demo</span>
-                                    <ProjectLink link="https://www.google.com/" />
+                                    <span>Live Demo</span>
+                                    <ProjectLink link={projects[projectIndex].link2} />
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    {/* <div className="soon-tm">
-                        <h2>More projects coming soon...</h2>
-                    </div> */}
                 </div>
+
+                <button onClick={handlePrevProject}>prev</button>
+                <button onClick={handleNextProject}>next</button>
             </div>
         </section>
     );

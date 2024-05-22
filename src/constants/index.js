@@ -57,4 +57,22 @@ export const links = [
 ];
 
 export const aboutInfo =
-    "I am an aspiring software developer, currently focusing on mastering front-end development. I'm eager to apply my skills in a collaborative environment where I can learn, grow, and contribute to meaningful projects. If you're looking for a motivated and adaptable developer, please reach out!";
+    `I am an aspiring software developer, currently focusing on mastering front-end development. 
+    I'm eager to apply my skills in a collaborative environment where I can learn, grow, 
+    and contribute to meaningful projects. If you're looking for a motivated and 
+    adaptable developer, please reach out!`;
+
+export const projects = [
+    {
+        imgSrc: '/DevPortfolio/quiz-main.PNG',
+        title: 'Quizzy Time',
+        description: `Quizzy Time is a simple quiz web application, built with react 
+        using api from opentdb. Currently it has the following features: quiz progression, 
+        timer, hint, and navigation between questions.`,
+        link1: 'https://www.google.com/',
+        link2: 'https://www.google.com/'
+    },
+    {
+        title: 'Test'
+    }
+]
