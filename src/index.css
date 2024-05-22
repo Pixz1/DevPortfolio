@@ -62,6 +62,15 @@ a:hover .linkedin-svg path {
     }
     /* END: Header Style */
 
+    /* START: Sidebar Style */
+    .side-links {
+        background-color: var(--light-color);
+    }
+    .side-links::before {
+        color: var(--light-color);
+    }
+    /* END: Sidebar Style */
+
     /* START: Home, About, Projects Style */
     #home,
     #projects {
@@ -128,6 +137,15 @@ a:hover .linkedin-svg path {
         background-color: var(--dark-bg);
     }
     /* END: Header Style */
+
+    /* START: Sidebar Style */
+    .side-links {
+        background-color: var(--dark-color);
+    }
+    .side-links::before {
+        color: var(--dark-color);
+    }
+    /* END: Sidebar Style */
 
     /* START: Home, About, Projects Style */
     #home,
