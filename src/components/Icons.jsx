@@ -18,10 +18,10 @@ const LinkedIn = () => {
     );
 };
 
-const Github = ({ width = 30, height = 30 }) => {
+const Github = ({ link, width = 30, height = 30 }) => {
     return (
         <a
-            href="https://github.com/Pixz1/quiz-app"
+            href={link}
             target="_blank"
             rel="noopener noreferrer"
         >
