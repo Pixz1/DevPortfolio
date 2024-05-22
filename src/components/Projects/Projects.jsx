@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 import "./Projects.css";
-import { Github, ProjectLink } from "../Icons";
+import { Github, ProjectLink, LeftChev, RightChev } from "../Icons";
 import { projects } from "../../constants";
 
 export default function Projects() {
@@ -9,19 +9,19 @@ export default function Projects() {
 
     const handlePrevProject = () => {
         if (projectIndex > 0) {
-            setProjectIndex(projectIndex - 1)
+            setProjectIndex(projectIndex - 1);
         } else {
-            setProjectIndex(projects.length - 1)
+            setProjectIndex(projects.length - 1);
         }
-    }
+    };
 
     const handleNextProject = () => {
         if (projectIndex < projects.length - 1) {
-            setProjectIndex(projectIndex + 1)
+            setProjectIndex(projectIndex + 1);
         } else {
-            setProjectIndex(0)
+            setProjectIndex(0);
         }
-    }
+    };
 
     return (
         <section id="projects">
@@ -54,22 +54,28 @@ export default function Projects() {
                             <div className="links">
                                 <div className="link">
                                     <span>Code</span>
-                                    <Github width={25} height={25} 
+                                    <Github
+                                        width={25}
+                                        height={25}
                                         link={projects[projectIndex].link1}
                                     />
                                 </div>
 
                                 <div className="link">
                                     <span>Live Demo</span>
-                                    <ProjectLink link={projects[projectIndex].link2} />
+                                    <ProjectLink
+                                        link={projects[projectIndex].link2}
+                                    />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <button onClick={handlePrevProject}>prev</button>
-                <button onClick={handleNextProject}>next</button>
+                <div className="chevron">
+                    <LeftChev handleClick={handlePrevProject} />
+                    <RightChev handleClick={handleNextProject} />
+                </div>
             </div>
         </section>
     );

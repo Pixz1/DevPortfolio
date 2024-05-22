@@ -27,9 +27,13 @@
     scrollbar-width: none;
 }
 
-/* ::selection {
-    background: var(--color-primary);
-} */
+button {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    color: inherit;
+}
 
 /* linkedin and github component css */
 .linkedin-svg,
